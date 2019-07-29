@@ -1,4 +1,4 @@
-@echo off & color 0f
+@echo off & color 0f & ansicon -p
 :: UserRecon v1.0
 :: Author: @thelinuxchoice (Windows version: @hXR16F)
 :: https://github.com/thelinuxchoice/userrecon
@@ -845,5 +845,6 @@ find /i "404 Not Found" _temp.html >nul && (
 )
 del /f /q "_temp.html" >nul
 
+echo.
 if exist "%username%.txt" echo [92m[[0m[97m*[0m[92m] Saved:[0m[97m %username%.txt
-pause
+echo [92m[[0m[97m*[0m[92m] Press any key to exit . . . & ansicon -pu & pause >nul
