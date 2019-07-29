@@ -27,7 +27,7 @@ find /i "The link you followed may be broken" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.instagram.com/%username%
-	echo https://www.instagram.com/%username%> "%username%.txt"
+	echo https://www.instagram.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -38,7 +38,7 @@ find /i "not found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.facebook.com/%username%
-	echo https://www.facebook.com/%username%> "%username%.txt"
+	echo https://www.facebook.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -49,7 +49,7 @@ find /i "page doesn’t exist" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.twitter.com/%username%
-	echo https://www.twitter.com/%username%> "%username%.txt"
+	echo https://www.twitter.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -60,7 +60,7 @@ find /i "Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.youtube.com/%username%
-	echo https://www.youtube.com/%username%> "%username%.txt"
+	echo https://www.youtube.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -71,7 +71,7 @@ find /i "Blog not found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.blogspot.com
-	echo https://%username%.blogspot.com> "%username%.txt"
+	echo https://%username%.blogspot.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -82,7 +82,7 @@ find /i "Location: https://accounts.google.com/ServiceLogin" _temp.html >nul && 
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://plus.google.com/+%username%/posts
-	echo https://plus.google.com/+%username%/posts> "%username%.txt"
+	echo https://plus.google.com/+%username%/posts>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -93,7 +93,7 @@ find /i "exist" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.reddit.com/user/%username%
-	echo https://www.reddit.com/user/%username%> "%username%.txt"
+	echo https://www.reddit.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -104,7 +104,7 @@ find /i "Do you want to register" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.wordpress.com
-	echo https://%username%.wordpress.com> "%username%.txt"
+	echo https://%username%.wordpress.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -115,7 +115,7 @@ find /i "Something went wrong." _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.pinterest.com/%username%
-	echo https://www.pinterest.com/%username%> "%username%.txt"
+	echo https://www.pinterest.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -126,7 +126,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.github.com/%username%
-	echo https://www.github.com/%username%> "%username%.txt"
+	echo https://www.github.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -137,7 +137,7 @@ find /i "location: https://www.tumblr.com/privacy/consent?redirect" _temp.html >
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.tumblr.com
-	echo https://%username%.tumblr.com> "%username%.txt"
+	echo https://%username%.tumblr.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -148,7 +148,7 @@ find /i "Location: /browser/upgrade/?continue=" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.flickr.com/people/%username%
-	echo https://www.flickr.com/people/%username%> "%username%.txt"
+	echo https://www.flickr.com/people/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -159,7 +159,7 @@ find /i "The specified profile could not be found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://steamcommunity.com/id/%username%
-	echo https://steamcommunity.com/id/%username%> "%username%.txt"
+	echo https://steamcommunity.com/id/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -170,7 +170,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://vimeo.com/%username%
-	echo https://vimeo.com/%username%> "%username%.txt"
+	echo https://vimeo.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -181,7 +181,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://soundcloud.com/%username%
-	echo https://soundcloud.com/%username%> "%username%.txt"
+	echo https://soundcloud.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -192,7 +192,7 @@ find /i "404 NOT FOUND" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://disqus.com/%username%
-	echo https://disqus.com/%username%> "%username%.txt"
+	echo https://disqus.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -203,7 +203,7 @@ find /i "We couldn’t find this page." _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://medium.com/@%username%
-	echo https://medium.com/@%username%> "%username%.txt"
+	echo https://medium.com/@%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -214,7 +214,7 @@ find /i "The page you were looking for doesn" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.deviantart.com
-	echo https://%username%.deviantart.com> "%username%.txt"
+	echo https://%username%.deviantart.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -225,7 +225,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://vk.com/%username%
-	echo https://vk.com/%username%> "%username%.txt"
+	echo https://vk.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -236,7 +236,7 @@ find /i "Freelancers and entrepreneurs use about.me" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://about.me/%username%
-	echo https://about.me/%username%> "%username%.txt"
+	echo https://about.me/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -247,7 +247,7 @@ find /i "taken a wrong turn." _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://imgur.com/user/%username%
-	echo https://imgur.com/user/%username%> "%username%.txt"
+	echo https://imgur.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -258,7 +258,7 @@ find /i "THIS PAGE DOES NOT EXIST" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://flipboard.com/@%username%
-	echo https://flipboard.com/@%username%> "%username%.txt"
+	echo https://flipboard.com/@%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -269,7 +269,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://slideshare.net/%username%
-	echo https://slideshare.net/%username%> "%username%.txt"
+	echo https://slideshare.net/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -280,7 +280,7 @@ find /i "Sorry, couldn" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://open.spotify.com/user/%username%
-	echo https://open.spotify.com/user/%username%> "%username%.txt"
+	echo https://open.spotify.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -291,7 +291,7 @@ find /i "error-message" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.mixcloud.com/%username%
-	echo https://www.mixcloud.com/%username%> "%username%.txt"
+	echo https://www.mixcloud.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -302,7 +302,7 @@ find /i "show_404" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.scribd.com/%username%
-	echo https://www.scribd.com/%username%> "%username%.txt"
+	echo https://www.scribd.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -313,7 +313,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.badoo.com/en/%username%
-	echo https://www.badoo.com/en/%username%> "%username%.txt"
+	echo https://www.badoo.com/en/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -324,7 +324,7 @@ find /i "Oh no! Looks like you got lost." _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.patreon.com/%username%
-	echo https://www.patreon.com/%username%> "%username%.txt"
+	echo https://www.patreon.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -335,7 +335,7 @@ find /i "That link has no power here" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://bitbucket.org/%username%
-	echo https://bitbucket.org/%username%> "%username%.txt"
+	echo https://bitbucket.org/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -346,7 +346,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.dailymotion.com/%username%
-	echo https://www.dailymotion.com/%username%> "%username%.txt"
+	echo https://www.dailymotion.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -357,7 +357,7 @@ find /i "the page you were looking for was not found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.etsy.com/shop/%username%
-	echo https://www.etsy.com/shop/%username%> "%username%.txt"
+	echo https://www.etsy.com/shop/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -368,7 +368,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://cash.me/%username%
-	echo https://cash.me/%username%> "%username%.txt"
+	echo https://cash.me/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -379,7 +379,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.behance.net/%username%
-	echo https://www.behance.net/%username%> "%username%.txt"
+	echo https://www.behance.net/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -390,7 +390,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.goodreads.com/%username%
-	echo https://www.goodreads.com/%username%> "%username%.txt"
+	echo https://www.goodreads.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -401,7 +401,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.instructables.com/member/%username%
-	echo https://www.instructables.com/member/%username%> "%username%.txt"
+	echo https://www.instructables.com/member/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -412,7 +412,7 @@ rem find /i "it does not exist." _temp.html >nul && (
 rem 	echo [93mNot Found![0m
 rem ) || (
 rem 	echo [92mFound![0m https://keybase.io/%username%
-rem 	echo https://keybase.io/%username%> "%username%.txt"
+rem 	echo https://keybase.io/%username%>> "%username%.txt"
 rem )
 rem del /f /q "_temp.html" >nul
 
@@ -423,7 +423,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://kongregate.com/accounts/%username%
-	echo https://kongregate.com/accounts/%username%> "%username%.txt"
+	echo https://kongregate.com/accounts/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -434,7 +434,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.livejournal.com
-	echo https://%username%.livejournal.com> "%username%.txt"
+	echo https://%username%.livejournal.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -445,7 +445,7 @@ rem find /i "404" _temp.html >nul && (
 rem 	echo [93mNot Found![0m
 rem ) || (
 rem 	echo [92mFound![0m https://angel.co/%username%
-rem 	echo https://angel.co/%username%> "%username%.txt"
+rem 	echo https://angel.co/%username%>> "%username%.txt"
 rem )
 rem del /f /q "_temp.html" >nul
 
@@ -456,7 +456,7 @@ find /i "Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://last.fm/user/%username%
-	echo https://last.fm/user/%username%> "%username%.txt"
+	echo https://last.fm/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -467,7 +467,7 @@ find /i "that page is gone" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://dribbble.com/%username%
-	echo https://dribbble.com/%username%> "%username%.txt"
+	echo https://dribbble.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -478,7 +478,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.codecademy.com/%username%
-	echo https://www.codecademy.com/%username%> "%username%.txt"
+	echo https://www.codecademy.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -489,7 +489,7 @@ find /i "sorry, we couldn" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://en.gravatar.com/%username%
-	echo https://en.gravatar.com/%username%> "%username%.txt"
+	echo https://en.gravatar.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -500,7 +500,7 @@ find /i "location: /index" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://pastebin.com/u/%username%
-	echo https://pastebin.com/u/%username%> "%username%.txt"
+	echo https://pastebin.com/u/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -511,7 +511,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://foursquare.com/%username%
-	echo https://foursquare.com/%username%> "%username%.txt"
+	echo https://foursquare.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -521,8 +521,8 @@ curl -s -i "https://www.roblox.com/user.aspx?username=%username%" -H "Accept-Lan
 find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
-	echo [92mFound![0m https://bitbuckehttps://www.roblox.com/user.aspx?username=%username%t.org/%username%
-	echo https://www.roblox.com/user.aspx?username=%username%> "%username%.txt"
+	echo [92mFound![0m https://www.roblox.com/user.aspx?username=%username%t.org/%username%
+	echo https://www.roblox.com/user.aspx?username=%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -533,7 +533,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.gumroad.com/%username%
-	echo https://www.gumroad.com/%username%> "%username%.txt"
+	echo https://www.gumroad.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -544,7 +544,7 @@ find /i "exists in our system" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.newgrounds.com
-	echo https://%username%.newgrounds.com> "%username%.txt"
+	echo https://%username%.newgrounds.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -555,7 +555,7 @@ find /i "userError-404" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.wattpad.com/user/%username%
-	echo https://www.wattpad.com/user/%username%> "%username%.txt"
+	echo https://www.wattpad.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -566,7 +566,7 @@ find /i "Not found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.canva.com/%username%
-	echo https://www.canva.com/%username%> "%username%.txt"
+	echo https://www.canva.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -577,7 +577,7 @@ rem find /i "Ready-to-use design assets" _temp.html >nul && (
 rem 	echo [93mNot Found![0m
 rem ) || (
 rem 	echo [92mFound![0m https://creativemarket.com/%username%
-rem 	echo https://creativemarket.com/%username%> "%username%.txt"
+rem 	echo https://creativemarket.com/%username%>> "%username%.txt"
 rem )
 rem del /f /q "_temp.html" >nul
 
@@ -588,7 +588,7 @@ find /i "The page you were looking for doesn" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.trakt.tv/users/%username%
-	echo https://www.trakt.tv/users/%username%> "%username%.txt"
+	echo https://www.trakt.tv/users/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -599,7 +599,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://500px.com/%username%
-	echo https://500px.com/%username%> "%username%.txt"
+	echo https://500px.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -610,7 +610,7 @@ find /i "find the page you" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://buzzfeed.com/%username%
-	echo https://buzzfeed.com/%username%> "%username%.txt"
+	echo https://buzzfeed.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -621,7 +621,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://tripadvisor.com/members/%username%
-	echo https://tripadvisor.com/members/%username%> "%username%.txt"
+	echo https://tripadvisor.com/members/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -632,7 +632,7 @@ find /i "Page does not exist" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.hubpages.com
-	echo https://%username%.hubpages.com> "%username%.txt"
+	echo https://%username%.hubpages.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -643,7 +643,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.contently.com
-	echo https://%username%.contently.com> "%username%.txt"
+	echo https://%username%.contently.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -654,7 +654,7 @@ find /i "The page you requested was not found." _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://houzz.com/user/%username%
-	echo https://houzz.com/user/%username%> "%username%.txt"
+	echo https://houzz.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -665,7 +665,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://blip.fm/%username%
-	echo https://blip.fm/%username%> "%username%.txt"
+	echo https://blip.fm/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -676,7 +676,7 @@ find /i "is not registered." _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.wikipedia.org/wiki/User:%username%
-	echo https://www.wikipedia.org/wiki/User:%username%> "%username%.txt"
+	echo https://www.wikipedia.org/wiki/User:%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -687,7 +687,7 @@ find /i "No such user" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://news.ycombinator.com/user?id=%username%
-	echo https://news.ycombinator.com/user?id=%username%> "%username%.txt"
+	echo https://news.ycombinator.com/user?id=%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -698,7 +698,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.codementor.io/%username%
-	echo https://www.codementor.io/%username%> "%username%.txt"
+	echo https://www.codementor.io/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -709,7 +709,7 @@ find /i "Sorry, we couldn" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.reverbnation.com/%username%
-	echo https://www.reverbnation.com/%username%> "%username%.txt"
+	echo https://www.reverbnation.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -720,7 +720,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.designspiration.net/%username%
-	echo https://www.designspiration.net/%username%> "%username%.txt"
+	echo https://www.designspiration.net/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -731,7 +731,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.bandcamp.com/%username%
-	echo https://www.bandcamp.com/%username%> "%username%.txt"
+	echo https://www.bandcamp.com/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -742,7 +742,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.colourlovers.com/love/%username%
-	echo https://www.colourlovers.com/love/%username%> "%username%.txt"
+	echo https://www.colourlovers.com/love/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -753,7 +753,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.ifttt.com/p/%username%
-	echo https://www.ifttt.com/p/%username%> "%username%.txt"
+	echo https://www.ifttt.com/p/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -764,7 +764,7 @@ find /i "eBay Profile - error" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.ebay.com/usr/%username%
-	echo https://www.ebay.com/usr/%username%> "%username%.txt"
+	echo https://www.ebay.com/usr/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -775,7 +775,7 @@ find /i "been a glitch" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.slack.com
-	echo https://%username%.slack.com> "%username%.txt"
+	echo https://%username%.slack.com>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -786,7 +786,7 @@ rem find /i "410 Gone" _temp.html >nul && (
 rem 	echo [93mNot Found![0m
 rem ) || (
 rem 	echo [92mFound![0m https://www.okcupid.com/profile/%username%
-rem 	echo https://www.okcupid.com/profile/%username%> "%username%.txt"
+rem 	echo https://www.okcupid.com/profile/%username%>> "%username%.txt"
 rem )
 rem del /f /q "_temp.html" >nul
 
@@ -797,7 +797,7 @@ find /i "not found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.trip.skyscanner.com/user/%username%
-	echo https://www.trip.skyscanner.com/user/%username%> "%username%.txt"
+	echo https://www.trip.skyscanner.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -808,7 +808,7 @@ find /i "find the page you" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://ello.co/%username%
-	echo https://ello.co/%username%> "%username%.txt"
+	echo https://ello.co/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -819,7 +819,7 @@ find /i "Location: /" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://tracky.com/user/%username%
-	echo https://tracky.com/user/%username%> "%username%.txt"
+	echo https://tracky.com/user/%username%>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -830,7 +830,7 @@ find /i "location: https://www.tripit.com/home" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://www.tripit.com/people/%username%#/profile/basic-info
-	echo https://www.tripit.com/people/%username%#/profile/basic-info> "%username%.txt"
+	echo https://www.tripit.com/people/%username%#/profile/basic-info>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
@@ -841,7 +841,7 @@ find /i "404 Not Found" _temp.html >nul && (
 	echo [93mNot Found![0m
 ) || (
 	echo [92mFound![0m https://%username%.basecamphq.com/login
-	echo https://%username%.basecamphq.com/login> "%username%.txt"
+	echo https://%username%.basecamphq.com/login>> "%username%.txt"
 )
 del /f /q "_temp.html" >nul
 
