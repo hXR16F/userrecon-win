@@ -1,5 +1,6 @@
-@echo off & color 0f & ansicon -p
-:: UserRecon v1.0
+@echo off
+color 0f
+call cl.bat & rem https://github.com/hXR16F/cl
 :: Author: @thelinuxchoice (Windows version: @hXR16F)
 :: https://github.com/thelinuxchoice/userrecon
 :: Give me the credits if you use any part of this code, read the License.
@@ -11,7 +12,7 @@ echo [97m ^| ^| ^| ^|___  ___ _ __^|  _ \ ___  ___ ___  _ __  [0m[92m// \    
 echo [97m ^| ^| ^| / __^|/ _ \ '__^| ^|_) / _ \/ __/ _ \^| '_ \ [0m[92m^|\__\    /__/^| [0m
 echo [97m ^| ^|_^| \__ \  __/ ^|  ^|  _ ^<  __/ (_^| (_) ^| ^| ^| ^| [0m[92m\    ^|^|    / [0m
 echo [97m  \___/^|___/\___^|_^|  ^|_^| \_\___^|\___\___/^|_^| ^|_^|  [0m[92m\        / [0m
-echo                    [92mv1.0, Author: @thelinuxchoice  [0m [92m\  __  / [0m
+echo                    [92m      Author: @thelinuxchoice  [0m [92m\  __  / [0m
 echo                         [92mWindows Version: @hXR16F [0m   [92m'.__.' [0m
 echo.
 
@@ -32,15 +33,16 @@ find /i "The link you followed may be broken" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Facebook
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Facebook: [0m"
-curl -s "https://www.facebook.com/%username%" -L -H "Accept-Language: en" -o "_temp.html"
-find /i "not found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.facebook.com/%username%
-	echo https://www.facebook.com/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Facebook: [0m"
+REM curl -s "https://www.facebook.com/%username%" -H "Accept-Language: en" -o "_temp.html"
+REM find /i "was not found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.facebook.com/%username%
+REM 	echo https://www.facebook.com/%username%>> "%username%.txt"
+REM )
+REM pause
+REM del /f /q "_temp.html" >nul
 
 :: Twitter
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Twitter: [0m"
@@ -65,15 +67,15 @@ find /i "Not Found" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Blogger
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Blogger: [0m"
-curl -s "https://%username%.blogspot.com" -L -H "Accept-Language: en" -i -o "_temp.html"
-find /i "Blog not found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://%username%.blogspot.com
-	echo https://%username%.blogspot.com>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Blogger: [0m"
+REM curl -s "https://%username%.blogspot.com" -L -H "Accept-Language: en" -i -o "_temp.html"
+REM find /i "Blog not found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://%username%.blogspot.com
+REM 	echo https://%username%.blogspot.com>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: GooglePlus
 echo | set /p ".=[97m[[0m[92m+[0m[97m] GooglePlus: [0m"
@@ -87,37 +89,37 @@ find /i "Location: https://accounts.google.com/ServiceLogin" _temp.html >nul && 
 del /f /q "_temp.html" >nul
 
 :: Reddit
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Reddit: [0m"
-curl -s -i "https://www.reddit.com/user/%username%" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
-find /i "exist" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.reddit.com/user/%username%
-	echo https://www.reddit.com/user/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Reddit: [0m"
+REM curl -s -i "https://www.reddit.com/user/%username%" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
+REM find /i "exist" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.reddit.com/user/%username%
+REM 	echo https://www.reddit.com/user/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Wordpress
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Wordpress: [0m"
-curl -s -i "https://%username%.wordpress.com" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
-find /i "Do you want to register" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://%username%.wordpress.com
-	echo https://%username%.wordpress.com>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Wordpress: [0m"
+REM curl -s -i "https://%username%.wordpress.com" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
+REM find /i "Do you want to register" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://%username%.wordpress.com
+REM 	echo https://%username%.wordpress.com>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Pinterest
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Pinterest: [0m"
-curl -s -i "https://www.pinterest.com/%username%" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
-find /i "Something went wrong." _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.pinterest.com/%username%
-	echo https://www.pinterest.com/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Pinterest: [0m"
+REM curl -s -i "https://www.pinterest.com/%username%" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
+REM find /i "Something went wrong." _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.pinterest.com/%username%
+REM 	echo https://www.pinterest.com/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: GitHub
 echo | set /p ".=[97m[[0m[92m+[0m[97m] GitHub: [0m"
@@ -131,15 +133,15 @@ find /i "404 Not Found" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Tumblr
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Tumblr: [0m"
-curl -s -i "https://%username%.tumblr.com" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
-find /i "location: https://www.tumblr.com/privacy/consent?redirect" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://%username%.tumblr.com
-	echo https://%username%.tumblr.com>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Tumblr: [0m"
+REM curl -s -i "https://%username%.tumblr.com" -H "Accept-Language: en" -L --user-agent '"Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.3) Gecko/20010801"' -o "_temp.html"
+REM find /i "location: https://www.tumblr.com/privacy/consent?redirect" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://%username%.tumblr.com
+REM 	echo https://%username%.tumblr.com>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Flickr
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Flickr: [0m"
@@ -208,15 +210,15 @@ find /i "We couldn’t find this page." _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: DeviantArt
-echo | set /p ".=[97m[[0m[92m+[0m[97m] DeviantArt: [0m"
-curl -s -i "https://%username%.deviantart.com" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "The page you were looking for doesn" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://%username%.deviantart.com
-	echo https://%username%.deviantart.com>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] DeviantArt: [0m"
+REM curl -s -i "https://%username%.deviantart.com" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "The page you were looking for doesn" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://%username%.deviantart.com
+REM 	echo https://%username%.deviantart.com>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: VK
 echo | set /p ".=[97m[[0m[92m+[0m[97m] VK: [0m"
@@ -241,15 +243,15 @@ find /i "Freelancers and entrepreneurs use about.me" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Imgur
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Imgur: [0m"
-curl -s -i "https://imgur.com/user/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "taken a wrong turn." _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://imgur.com/user/%username%
-	echo https://imgur.com/user/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Imgur: [0m"
+REM curl -s -i "https://imgur.com/user/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "taken a wrong turn." _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://imgur.com/user/%username%
+REM 	echo https://imgur.com/user/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: FlipBoard
 echo | set /p ".=[97m[[0m[92m+[0m[97m] FlipBoard: [0m"
@@ -285,15 +287,15 @@ find /i "Sorry, couldn" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: MixCloud
-echo | set /p ".=[97m[[0m[92m+[0m[97m] MixCloud: [0m"
-curl -s -i "https://www.mixcloud.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "error-message" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.mixcloud.com/%username%
-	echo https://www.mixcloud.com/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] MixCloud: [0m"
+REM curl -s -i "https://www.mixcloud.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "error-message" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.mixcloud.com/%username%
+REM 	echo https://www.mixcloud.com/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Scribd
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Scribd: [0m"
@@ -362,15 +364,15 @@ find /i "the page you were looking for was not found" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: CashMe
-echo | set /p ".=[97m[[0m[92m+[0m[97m] CashMe: [0m"
-curl -s -i "https://cash.me/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "404 Not Found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://cash.me/%username%
-	echo https://cash.me/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] CashMe: [0m"
+REM curl -s -i "https://cash.me/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "404 Not Found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://cash.me/%username%
+REM 	echo https://cash.me/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Behance
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Behance: [0m"
@@ -472,15 +474,15 @@ find /i "that page is gone" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Codeacademy
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Codeacademy: [0m"
-curl -s -i "https://www.codecademy.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "404 Not Found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.codecademy.com/%username%
-	echo https://www.codecademy.com/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Codeacademy: [0m"
+REM curl -s -i "https://www.codecademy.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "404 Not Found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.codecademy.com/%username%
+REM 	echo https://www.codecademy.com/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Gravatar
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Gravatar: [0m"
@@ -505,15 +507,15 @@ find /i "location: /index" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Foursquare
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Foursquare: [0m"
-curl -s -i "https://foursquare.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "404 Not Found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://foursquare.com/%username%
-	echo https://foursquare.com/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Foursquare: [0m"
+REM curl -s -i "https://foursquare.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "404 Not Found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://foursquare.com/%username%
+REM 	echo https://foursquare.com/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Roblox
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Roblox: [0m"
@@ -538,15 +540,15 @@ find /i "404 Not Found" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Newgrounds
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Newgrounds: [0m"
-curl -s -i "https://%username%.newgrounds.com" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "exists in our system" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://%username%.newgrounds.com
-	echo https://%username%.newgrounds.com>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Newgrounds: [0m"
+REM curl -s -i "https://%username%.newgrounds.com" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "exists in our system" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://%username%.newgrounds.com
+REM 	echo https://%username%.newgrounds.com>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Wattpad
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Wattpad: [0m"
@@ -560,15 +562,15 @@ find /i "userError-404" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: Canva
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Canva: [0m"
-curl -s -i "https://www.canva.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "Not found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.canva.com/%username%
-	echo https://www.canva.com/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Canva: [0m"
+REM curl -s -i "https://www.canva.com/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "Not found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.canva.com/%username%
+REM 	echo https://www.canva.com/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: CreativeMarket
 rem echo | set /p ".=[97m[[0m[92m+[0m[97m] CreativeMarket: [0m"
@@ -626,15 +628,15 @@ find /i "404 Not Found" _temp.html >nul && (
 del /f /q "_temp.html" >nul
 
 :: HubPages
-echo | set /p ".=[97m[[0m[92m+[0m[97m] HubPages: [0m"
-curl -s -i "https://%username%.hubpages.com" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "Page does not exist" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://%username%.hubpages.com
-	echo https://%username%.hubpages.com>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] HubPages: [0m"
+REM curl -s -i "https://%username%.hubpages.com" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "Page does not exist" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://%username%.hubpages.com
+REM 	echo https://%username%.hubpages.com>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Contently
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Contently: [0m"
@@ -791,15 +793,15 @@ rem )
 rem del /f /q "_temp.html" >nul
 
 :: Trip
-echo | set /p ".=[97m[[0m[92m+[0m[97m] Trip: [0m"
-curl -s -i "https://www.trip.skyscanner.com/user/%username%" -H "Accept-Language: en" -L -o "_temp.html"
-find /i "not found" _temp.html >nul && (
-	echo [93mNot Found![0m
-) || (
-	echo [92mFound![0m https://www.trip.skyscanner.com/user/%username%
-	echo https://www.trip.skyscanner.com/user/%username%>> "%username%.txt"
-)
-del /f /q "_temp.html" >nul
+REM echo | set /p ".=[97m[[0m[92m+[0m[97m] Trip: [0m"
+REM curl -s -i "https://www.trip.skyscanner.com/user/%username%" -H "Accept-Language: en" -L -o "_temp.html"
+REM find /i "not found" _temp.html >nul && (
+REM 	echo [93mNot Found![0m
+REM ) || (
+REM 	echo [92mFound![0m https://www.trip.skyscanner.com/user/%username%
+REM 	echo https://www.trip.skyscanner.com/user/%username%>> "%username%.txt"
+REM )
+REM del /f /q "_temp.html" >nul
 
 :: Ello
 echo | set /p ".=[97m[[0m[92m+[0m[97m] Ello: [0m"
@@ -847,4 +849,4 @@ del /f /q "_temp.html" >nul
 
 echo.
 if exist "%username%.txt" echo [92m[[0m[97m*[0m[92m] Saved:[0m[97m %username%.txt
-echo [92m[[0m[97m*[0m[92m] Press any key to exit . . . & ansicon -pu & pause >nul
+echo [92m[[0m[97m*[0m[92m] Press any key to exit . . . & pause >nul
