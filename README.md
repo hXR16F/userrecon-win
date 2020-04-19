@@ -8,5 +8,4 @@ This is useful if you are running an investigation to determine the usage of the
 ![ur](https://user-images.githubusercontent.com/48186982/62042295-0c703300-b1fe-11e9-9734-92032bfe03e3.png)
 
 # Donate
-If you support my work or like my projects, you can donate me some money. Thank you 💙\
-BTC: `1GZRqMvfAhsHbWAJUKf9EruBPNKqwGAPFU`
+If you support my work or like my projects, [you can donate me some money](https://github.com/hXR16F/donate/blob/master/README.md). Thank you 💙
